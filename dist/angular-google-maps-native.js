@@ -743,7 +743,7 @@
     .directive('gmMap', ['gmLibrary', function (gmLibrary) {
       return {
         restrict: 'E',
-        scope: true,
+        scope: {ngModel: '='},
         controller: ['$scope', '$element', '$attrs', function ($scope, $element, $attrs) {
           var map, build,
             self = this,
@@ -780,6 +780,7 @@
             $timeout(function () { // wait until dom element visibility is toggled if needed
               map = new googleMap.Map(target[0], options);
               $scope.map = map;
+              $scope.ngModel = map;
               bind(map, $scope, $attrs);
               deferred.resolve(map);
             }, 100);

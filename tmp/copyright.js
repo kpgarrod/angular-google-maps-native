@@ -1,0 +1,1 @@
+/*! angular-google-maps-native v2.0.0 | 2015-08-09 | DEMONTE Jean-Baptiste | jbdemonte@gmail.com | GPL v3 */
